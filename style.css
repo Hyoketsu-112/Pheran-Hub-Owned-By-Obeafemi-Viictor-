@@ -1,0 +1,38 @@
+    /*
+      Custom styles to enhance the design beyond Tailwind classes.
+      We're using a smooth scroll behavior and a subtle hero animation.
+    */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f4f8; /* Light gray background for a modern feel */
+    }
+
+    /* Keyframes for the hero image fade-in animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-image-animate {
+      animation: fadeIn 1s ease-out;
+    }
+
+    /*
+      Custom CSS for the 3D product card effect.
+      Tailwind's `transform` is great, but we need
+      this to make the 3D perspective work correctly.
+    */
+    .product-card {
+      transform-style: preserve-3d;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      perspective: 1000px;
+    }
+    
+    .product-card-inner {
+      transform-style: preserve-3d;
+    }
+  
